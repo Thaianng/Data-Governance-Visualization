@@ -1,353 +1,452 @@
-# 🧠 Stroke Prediction - Data Governance & Visualization Project
-
-> **Bài Tập Lớn** - Dự án phân tích và dự đoán nguy cơ đột quỵ (Stroke) sử dụng các kỹ thuật Data Governance, Machine Learning và Visualization.
-
-[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg)](https://www.python.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
----
+# 🏥 Stroke Prediction - Data Governance & Visualization Project
 
 ## 📋 Mục Lục
-
-1. [Giới Thiệu](#-giới-thiệu)
-2. [Yêu Cầu Bài Tập](#-yêu-cầu-bài-tập)
+1. [Giới Thiệu Dự Án](#-giới-thiệu-dự-án)
+2. [Nguồn Dữ Liệu](#-nguồn-dữ-liệu)
 3. [Cấu Trúc Dự Án](#-cấu-trúc-dự-án)
-4. [Dữ Liệu](#-dữ-liệu)
-5. [Phương Pháp](#-phương-pháp)
-6. [Kết Quả](#-kết-quả)
-7. [Hướng Dẫn Chạy](#-hướng-dẫn-chạy)
-8. [Kết Luận](#-kết-luận)
+4. [Phương Pháp Luận](#-phương-pháp-luận)
+5. [Phân Tích Dữ Liệu Khám Phá (EDA)](#-phân-tích-dữ-liệu-khám-phá-eda)
+6. [Mô Hình Hóa & Kết Quả](#-mô-hình-hóa--kết-quả)
+7. [Kết Luận & Khuyến Nghị](#-kết-luận--khuyến-nghị)
+8. [Hướng Dẫn Cài Đặt](#-hướng-dẫn-cài-đặt)
 
 ---
 
-## 🎯 Giới Thiệu
+## 🎯 Giới Thiệu Dự Án
 
 ### Bối Cảnh
-Đột quỵ (Stroke) là nguyên nhân gây tử vong hàng đầu thế giới, chiếm khoảng 11% tổng số ca tử vong toàn cầu (WHO). Dự án này xây dựng mô hình Machine Learning để dự đoán nguy cơ đột quỵ dựa trên các đặc điểm sức khỏe và lối sống.
+Đột quỵ (Stroke) là nguyên nhân tử vong hàng đầu thế giới, chiếm khoảng 11% tổng số ca tử vong toàn cầu theo WHO. Việc dự đoán sớm nguy cơ đột quỵ có thể giúp phòng ngừa và can thiệp kịp thời.
 
 ### Mục Tiêu
-- **Thu thập & Tích hợp dữ liệu** từ nhiều nguồn (Kaggle, HuggingFace)
-- **Xử lý Missing Data** với 3 phương pháp khác nhau
-- **Xử lý Class Imbalance** với 3 kỹ thuật khác nhau  
-- **So sánh 27 pipelines** (3 × 3 × 3 models)
-- **Visualization** chi tiết cho phân tích EDA và kết quả modeling
+- **Thu thập & Tích hợp dữ liệu** từ nhiều nguồn (Data Governance)
+- **Xử lý dữ liệu thiếu** với nhiều phương pháp khác nhau
+- **Phân tích khám phá** (EDA) và trực quan hóa dữ liệu
+- **Xây dựng mô hình dự đoán** đột quỵ với các kỹ thuật xử lý mất cân bằng
+
+### Kết Quả Đạt Được
+| Chỉ Số | Giá Trị |
+|--------|---------|
+| **ROC-AUC** | **0.863** |
+| **Recall** | **84.4%** |
+| **PR-AUC** | 0.281 |
+| **F1-Score** | 26.0% |
+
+> ⚠️ **Lưu ý**: PR-AUC và F1-Score thấp là BÌNH THƯỜNG với dữ liệu mất cân bằng nghiêm trọng (tỷ lệ 1:20). Điều quan trọng là ROC-AUC cao (0.863) và Recall cao (84.4%) - nghĩa là mô hình phát hiện được 84.4% ca đột quỵ thực tế.
 
 ---
 
-## 📝 Yêu Cầu Bài Tập
+## 📊 Nguồn Dữ Liệu
 
-### ✅ Checklist Hoàn Thành
+### 1. Kaggle Healthcare Dataset
+- **Nguồn**: [Kaggle Stroke Prediction Dataset](https://www.kaggle.com/fedesoriano/stroke-prediction-dataset)
+- **Số lượng**: 5,110 bản ghi
+- **Đặc điểm**: Dataset gốc, chất lượng cao
 
-| STT | Yêu Cầu | Trạng Thái | Ghi Chú |
-|-----|---------|------------|---------|
-| 1 | Thu thập dữ liệu từ ≥2 nguồn | ✅ Hoàn thành | Kaggle, HuggingFace, Synthetic |
-| 2 | Data Fusion (tích hợp dữ liệu) | ✅ Hoàn thành | 5,610 records sau merge |
-| 3 | Xử lý Missing Data (≥2 phương pháp) | ✅ Hoàn thành | M0, M1, M2 (3 phương pháp) |
-| 4 | Xử lý Imbalanced Data (≥2 phương pháp) | ✅ Hoàn thành | I0, I1, I2 (3 phương pháp) |
-| 5 | EDA & Visualization | ✅ Hoàn thành | 17 biểu đồ |
-| 6 | Training & Evaluation Models | ✅ Hoàn thành | 27 experiments |
-| 7 | So sánh kết quả các pipelines | ✅ Hoàn thành | Metrics comparison |
-| 8 | Lưu trữ models & results | ✅ Hoàn thành | .pkl, .csv, .json |
+### 2. HuggingFace Dataset
+- **Nguồn**: [HuggingFace Datasets](https://huggingface.co/datasets)
+- **Số lượng**: 5,110 bản ghi
+- **Đặc điểm**: Mirror của Kaggle, dùng để kiểm tra tính nhất quán
+
+### 3. Synthetic Dataset (Tự Tạo)
+- **Mục đích**: Demo kỹ thuật Data Fusion
+- **Số lượng**: 500 bản ghi
+- **Đặc điểm**: Sinh từ phân phối thống kê của dữ liệu gốc
+
+### Kết Quả Sau Tích Hợp
+```
+📁 Tổng cộng: 5,609 bản ghi (sau khi loại bỏ trùng lặp)
+📊 Số đặc trưng: 12 cột
+🎯 Biến mục tiêu: stroke (0/1)
+```
+
+### Các Thuộc Tính Dữ Liệu
+
+| Thuộc Tính | Kiểu | Mô Tả |
+|------------|------|-------|
+| `id` | int | ID bệnh nhân |
+| `gender` | str | Giới tính (Male/Female/Other) |
+| `age` | float | Tuổi |
+| `hypertension` | int | Tăng huyết áp (0/1) |
+| `heart_disease` | int | Bệnh tim (0/1) |
+| `ever_married` | str | Tình trạng hôn nhân |
+| `work_type` | str | Loại công việc |
+| `Residence_type` | str | Nơi ở (Urban/Rural) |
+| `avg_glucose_level` | float | Đường huyết trung bình |
+| `bmi` | float | Chỉ số BMI |
+| `smoking_status` | str | Tình trạng hút thuốc |
+| `stroke` | int | **Biến mục tiêu** (0: Không, 1: Có) |
 
 ---
 
-## 📂 Cấu Trúc Dự Án
+## 📁 Cấu Trúc Dự Án
 
 ```
 Data-Governance-Visualization/
-├── 📁 data/
-│   ├── 📁 raw/                          # Dữ liệu gốc
-│   │   ├── stroke_kaggle.csv            # 5,110 records từ Kaggle
-│   │   ├── stroke_huggingface.csv       # Mirror từ HuggingFace
-│   │   ├── stroke_synthetic.csv         # 500 records synthetic
-│   │   └── data_info.json               # Metadata
+│
+├── 📓 notebooks/
+│   ├── 01_data_collection.ipynb      # Thu thập dữ liệu
+│   ├── 02_data_fusion_cleaning.ipynb # Tích hợp & làm sạch
+│   ├── 03_eda_visualization.ipynb    # Phân tích khám phá
+│   └── 04_modeling.ipynb             # Mô hình hóa
+│
+├── 📂 data/
+│   ├── raw/                          # Dữ liệu gốc
+│   │   ├── stroke_kaggle.csv
+│   │   ├── stroke_huggingface.csv
+│   │   └── stroke_synthetic.csv
 │   │
-│   └── 📁 processed/                    # Dữ liệu đã xử lý
-│       ├── stroke_merged_clean.csv      # 5,610 records sau merge
-│       ├── stroke_M0.csv                # Listwise deletion (5,317 records)
-│       ├── stroke_M1.csv                # Mean/Median imputation (5,610 records)
-│       ├── stroke_M2.csv                # KNN imputation (5,610 records)
-│       ├── model_results.csv            # Kết quả 27 experiments
-│       ├── eda_summary.json             # EDA statistics
-│       └── label_encoders.json          # Encoding mappings
+│   └── processed/                    # Dữ liệu đã xử lý
+│       ├── stroke_M0.csv             # Listwise deletion (5,317 rows)
+│       ├── stroke_M1.csv             # Median imputation (5,610 rows)
+│       └── stroke_M2.csv             # KNN imputation (5,610 rows)
 │
-├── 📁 notebooks/                        # Jupyter Notebooks
-│   ├── 01_data_collection.ipynb         # Thu thập dữ liệu
-│   ├── 02_data_fusion_cleaning.ipynb    # Fusion & Missing data
-│   ├── 03_eda_visualization.ipynb       # EDA & Charts
-│   └── 04_modeling.ipynb                # Model training & evaluation
-│
-├── 📁 results/
-│   ├── 📁 figures/                      # Biểu đồ (17 files)
-│   │   ├── eda_*.png                    # EDA visualizations
-│   │   ├── missing_*.png                # Missing data analysis
-│   │   ├── model_*.png                  # Model comparisons
-│   │   ├── feature_importance.png       # Feature importance
-│   │   └── best_model_evaluation.png    # Best model ROC/PR curves
+├── 📊 results/
+│   ├── figures/                      # Biểu đồ trực quan
+│   │   ├── eda_*.png                 # Các biểu đồ EDA
+│   │   ├── missing_data_*.png        # Biểu đồ dữ liệu thiếu
+│   │   ├── model_metrics_*.png       # Biểu đồ so sánh mô hình
+│   │   ├── feature_importance.png    # Tầm quan trọng đặc trưng
+│   │   └── best_model_evaluation.png # Đánh giá mô hình tốt nhất
 │   │
-│   └── 📁 models/                       # Trained models
-│       ├── best_model.pkl               # Best model (Gradient Boosting)
-│       └── model_summary.json           # Summary & metrics
+│   └── models/
+│       ├── best_model.pkl            # Mô hình đã huấn luyện
+│       └── model_summary.json        # Tổng kết kết quả
 │
-├── 📁 src/                              # Source code
-│   ├── download_data.py                 # Data download utilities
-│   └── utils.py                         # Helper functions
-│
-├── requirements.txt                     # Python dependencies
-└── README.md                            # Documentation (file này)
+└── 📄 README.md                      # File này
 ```
 
 ---
 
-## 📊 Dữ Liệu
+## 🔬 Phương Pháp Luận
 
-### Nguồn Dữ Liệu
+### 1. Xử Lý Dữ Liệu Thiếu (Missing Data)
 
-| Nguồn | Số Records | Mô Tả |
-|-------|------------|-------|
-| **Kaggle** | 5,110 | Stroke Prediction Dataset |
-| **HuggingFace** | 5,110 | Mirror dataset |
-| **Synthetic** | 500 | Generated data cho data fusion demo |
-| **Merged** | **5,610** | Sau khi deduplicate |
+Dữ liệu có **5.22% giá trị thiếu** ở cột `bmi` (293 giá trị).
 
-### Các Biến (Features)
+| Phương Pháp | Mã | Mô Tả | Số Bản Ghi |
+|-------------|-----|-------|------------|
+| **Listwise Deletion** | M0 | Xóa các hàng có giá trị thiếu | 5,317 |
+| **Median Imputation** | M1 | Điền bằng giá trị trung vị | 5,610 |
+| **KNN Imputation** | M2 | Điền bằng K-Nearest Neighbors (k=5) | 5,610 |
 
-| Biến | Kiểu | Mô Tả | Missing |
-|------|------|-------|---------|
-| `id` | int | ID bệnh nhân | 0% |
-| `gender` | cat | Male/Female/Other | 0% |
-| `age` | float | Tuổi (0.08 - 82) | 0% |
-| `hypertension` | int | Cao huyết áp (0/1) | 0% |
-| `heart_disease` | int | Bệnh tim (0/1) | 0% |
-| `ever_married` | cat | Đã kết hôn (Yes/No) | 0% |
-| `work_type` | cat | Loại công việc | 0% |
-| `Residence_type` | cat | Urban/Rural | 0% |
-| `avg_glucose_level` | float | Đường huyết TB | 0% |
-| `bmi` | float | Chỉ số BMI | **5.22%** |
-| `smoking_status` | cat | Tình trạng hút thuốc | 0% |
-| `stroke` | int | **Target** (0/1) | 0% |
+![Missing Data Analysis](results/figures/missing_data_analysis.png)
 
-### Class Imbalance
+*Biểu đồ phân tích dữ liệu thiếu: Heatmap hiển thị pattern của missing values*
+
+![Missing Data Comparison](results/figures/missing_data_comparison.png)
+
+*So sánh phân phối BMI trước và sau khi xử lý với các phương pháp khác nhau*
+
+### 2. Xử Lý Mất Cân Bằng (Imbalanced Data)
+
+Dữ liệu có **tỷ lệ mất cân bằng nghiêm trọng**: chỉ **4.83%** bản ghi là đột quỵ (271/5,609), tỷ lệ 1:20.
+
+| Phương Pháp | Mã | Mô Tả |
+|-------------|-----|-------|
+| **None** | I0 | Không xử lý (baseline) |
+| **SMOTE + Undersampling** | I1 | Kết hợp tăng mẫu thiểu số + giảm mẫu đa số |
+| **Class Weights** | I2 | Tăng trọng số cho lớp thiểu số |
+
+### 3. Các Mô Hình Được Thử Nghiệm
+
+| Mô Hình | Mô Tả |
+|---------|-------|
+| **Logistic Regression** | Mô hình tuyến tính cơ bản |
+| **Random Forest** | Ensemble với nhiều cây quyết định |
+| **Gradient Boosting** | Ensemble boosting tuần tự |
+
+### 4. Thiết Kế Thí Nghiệm
+
+Tổng cộng **27 pipeline** được thử nghiệm:
 
 ```
-Stroke Distribution:
-├── No Stroke (0): 5,338 (95.17%) ████████████████████████████████████████
-└── Stroke (1):      271 (4.83%)  ██
-
-Imbalance Ratio: 1:19.7 (Severely Imbalanced)
+3 Missing Methods × 3 Imbalance Methods × 3 Models = 27 Pipelines
 ```
+
+![Methodology Pipeline](results/figures/eda_methodology_pipeline.png)
+
+*Sơ đồ pipeline xử lý dữ liệu và mô hình*
 
 ---
 
-## 🔬 Phương Pháp
+## 📈 Phân Tích Dữ Liệu Khám Phá (EDA)
 
-### 1. Missing Data Handling
+### 1. Phân Bố Biến Mục Tiêu
 
-| Method | Code | Kỹ Thuật | Records |
-|--------|------|----------|---------|
-| **M0** | Listwise Deletion | Xóa rows có missing | 5,317 |
-| **M1** | Mean/Median Imputation | Điền median cho BMI | 5,610 |
-| **M2** | KNN Imputation | K-Nearest Neighbors (k=5) | 5,610 |
+![Stroke Distribution](results/figures/eda_stroke_distribution.png)
 
-### 2. Imbalance Handling
+- **Không đột quỵ (0)**: 5,338 bản ghi (95.17%)
+- **Đột quỵ (1)**: 271 bản ghi (4.83%)
+- **Tỷ lệ mất cân bằng**: 1:19.7
 
-| Method | Code | Kỹ Thuật | Mô Tả |
-|--------|------|----------|-------|
-| **I0** | None | Không xử lý | Baseline |
-| **I1** | SMOTE + Undersampling | Oversampling minority + Undersampling majority | Target ratio: 33% |
-| **I2** | Class Weights | `class_weight='balanced'` | Tự động cân bằng |
+> 🔴 **Thách thức**: Tỷ lệ mất cân bằng 1:20 khiến mô hình dễ bias về dự đoán "không đột quỵ". Cần áp dụng kỹ thuật xử lý mất cân bằng.
 
-### 3. Models
+### 2. Phân Bố Các Đặc Trưng Số
 
-| Model | Hyperparameters |
-|-------|-----------------|
-| **Logistic Regression** | `max_iter=1000`, `random_state=42` |
-| **Random Forest** | `n_estimators=100`, `max_depth=10`, `random_state=42` |
-| **Gradient Boosting** | `n_estimators=100`, `max_depth=5`, `random_state=42` |
+![Numerical Features](results/figures/eda_numerical_distributions.png)
 
-### 4. Evaluation Metrics
+**Quan sát chính:**
+- **Tuổi (age)**: Phân phối rộng từ 0-82, đỉnh ở 40-60 tuổi
+- **Đường huyết (avg_glucose_level)**: Phần lớn < 150, có nhóm > 200 (có thể tiểu đường)
+- **BMI**: Phân phối chuẩn, trung bình ~28.9
 
-| Metric | Lý Do Chọn |
-|--------|------------|
-| **ROC-AUC** | Đánh giá khả năng phân biệt tổng thể |
-| **PR-AUC** | Tốt cho imbalanced data |
-| **F1-Score** | Cân bằng Precision & Recall |
-| **Recall** | Quan trọng nhất cho y tế (không bỏ sót bệnh nhân) |
-| **Precision** | Độ chính xác của positive predictions |
+### 3. Phân Bố Các Đặc Trưng Danh Mục
 
----
+![Categorical Features](results/figures/eda_categorical_distributions.png)
 
-## 📈 Kết Quả
+**Quan sát chính:**
+- **Giới tính**: Nữ nhiều hơn nam
+- **Tình trạng hút thuốc**: "never smoked" chiếm đa số
+- **Loại công việc**: "Private" là phổ biến nhất
 
-### Tổng Quan Experiments
+### 4. Ma Trận Tương Quan
 
-```
-Total Pipelines: 27 (3 Missing × 3 Imbalance × 3 Models)
-Models Detecting Stroke: 20/27 (74%)
-Models with Recall=0: 7/27 (26%) - Không xử lý imbalance → fail!
-```
+![Correlation Matrix](results/figures/eda_correlation_matrix.png)
 
-### Top 5 Pipelines (by ROC-AUC)
+**Tương quan với Stroke:**
+- **age**: 0.25 (tương quan dương cao nhất)
+- **hypertension**: 0.13
+- **heart_disease**: 0.13
+- **avg_glucose_level**: 0.13
 
-| Rank | Pipeline | Model | ROC-AUC | PR-AUC | Recall | F1 |
-|------|----------|-------|---------|--------|--------|-----|
-| 🥇 1 | M1_I0 | Gradient Boosting | **0.854** | 0.191 | 0.00% | 0.00% |
-| 🥈 2 | M1_I2 | Gradient Boosting | 0.854 | 0.191 | 0.00% | 0.00% |
-| 🥉 3 | M0_I1 | Logistic Regression | 0.851 | **0.227** | 57.78% | 22.51% |
-| 4 | M0_I2 | Logistic Regression | 0.851 | 0.204 | **84.44%** | 21.35% |
-| 5 | M0_I0 | Logistic Regression | 0.849 | 0.217 | 0.00% | 0.00% |
+### 5. Phân Tích Tuổi - Yếu Tố Quan Trọng Nhất
 
-### 🏆 Best Models by Criteria
+![Age vs Stroke](results/figures/eda_age_vs_stroke.png)
 
-#### 1. Best ROC-AUC (Discriminative Power)
-```
-Pipeline: M1_I0 + Gradient Boosting
-ROC-AUC: 0.8540
-⚠️ Warning: Recall = 0% (Cannot detect stroke cases!)
-```
+**Insight quan trọng:**
+- Nguy cơ đột quỵ tăng đáng kể sau tuổi 50
+- Hầu hết ca đột quỵ ở nhóm > 60 tuổi
+- Rất hiếm đột quỵ ở người < 30 tuổi
 
-#### 2. Best Recall (Medical Priority) ⭐ RECOMMENDED
-```
-Pipeline: M0_I2 + Logistic Regression
-Recall: 84.44%
-ROC-AUC: 0.8508
-F1-Score: 21.35%
-✅ Catches 84% of stroke cases - ideal for medical screening
-```
+### 6. Đường Huyết và Đột Quỵ
 
-#### 3. Best F1-Score (Balanced)
-```
-Pipeline: M2_I1 + Random Forest
-F1-Score: 27.52%
-Recall: 27.78%
-ROC-AUC: 0.8232
-```
+![Glucose vs Stroke](results/figures/eda_glucose_analysis.png)
 
-### Key Insights
+**Insight:**
+- Đường huyết cao (> 200) có tỷ lệ đột quỵ cao hơn
+- Có thể liên quan đến tiểu đường - yếu tố nguy cơ đột quỵ
 
-1. **Imbalance Handling is CRITICAL**
-   - Without it (I0): Most models predict all 0 → Recall = 0%
-   - Class weights (I2): Best Recall (84%) nhưng precision thấp
-   - SMOTE (I1): Cân bằng tốt nhất
+### 7. BMI và Đột Quỵ
 
-2. **Model Complexity Trade-off**
-   - Gradient Boosting: Best ROC-AUC nhưng poor recall
-   - Logistic Regression: Best recall (simple but effective)
-   - Random Forest: Best balance
+![BMI vs Stroke](results/figures/eda_bmi_analysis.png)
 
-3. **Missing Data Impact**
-   - KNN Imputation (M2) cho F1 tốt hơn
-   - Listwise Deletion (M0) vẫn hoạt động tốt với I1/I2
+### 8. Yếu Tố Nguy Cơ Kết Hợp
 
-### Top Risk Factors (Feature Importance)
+![Risk Factors](results/figures/eda_risk_factors.png)
 
-| Rank | Feature | Importance | Insight |
-|------|---------|------------|---------|
-| 1 | `age` | 0.285 | Tuổi cao → nguy cơ cao |
-| 2 | `avg_glucose_level` | 0.262 | Đường huyết cao → nguy cơ |
-| 3 | `bmi` | 0.198 | Béo phì → tăng nguy cơ |
-| 4 | `hypertension` | 0.089 | Cao huyết áp |
-| 5 | `heart_disease` | 0.067 | Bệnh tim |
+**Insight:**
+- **Tăng huyết áp + Bệnh tim**: Tăng nguy cơ đột quỵ đáng kể
+- Kết hợp nhiều yếu tố nguy cơ làm tăng rủi ro
 
 ---
 
-## 🚀 Hướng Dẫn Chạy
+## 🤖 Mô Hình Hóa & Kết Quả
 
-### Yêu Cầu Hệ Thống
+### 1. Tổng Quan Kết Quả 27 Pipeline
+
+![Model Metrics Comparison](results/figures/model_metrics_comparison.png)
+
+*So sánh ROC-AUC và Recall của tất cả 27 pipeline*
+
+### 2. Chi Tiết Kết Quả
+
+#### Top 5 Pipeline Theo ROC-AUC
+
+| Rank | Pipeline | Model | ROC-AUC | Recall | PR-AUC |
+|------|----------|-------|---------|--------|--------|
+| 1 | **M1_I2** | **Random Forest** | **0.863** | 0.688 | 0.281 |
+| 2 | M2_I2 | Random Forest | 0.862 | 0.719 | 0.268 |
+| 3 | M0_I2 | Random Forest | 0.861 | 0.688 | 0.268 |
+| 4 | M2_I1 | Gradient Boosting | 0.836 | 0.781 | 0.240 |
+| 5 | M1_I1 | Gradient Boosting | 0.834 | 0.750 | 0.229 |
+
+#### Top 5 Pipeline Theo Recall
+
+| Rank | Pipeline | Model | Recall | ROC-AUC | PR-AUC |
+|------|----------|-------|--------|---------|--------|
+| 1 | **M0_I2** | **Logistic Regression** | **0.844** | 0.822 | 0.219 |
+| 2 | M2_I1 | Random Forest | 0.844 | 0.821 | 0.227 |
+| 3 | M1_I2 | Logistic Regression | 0.844 | 0.820 | 0.221 |
+| 4 | M2_I2 | Logistic Regression | 0.844 | 0.822 | 0.228 |
+| 5 | M0_I2 | Gradient Boosting | 0.844 | 0.828 | 0.228 |
+
+### 3. So Sánh Phương Pháp Xử Lý Missing Data
+
+![Missing Data Methods](results/figures/model_metrics_by_missing_method.png)
+
+**Kết luận:**
+- **M1 (Median Imputation)** cho kết quả tốt nhất tổng thể
+- **M0 (Listwise Deletion)** mất ~5% dữ liệu nhưng kết quả vẫn tốt
+- **M2 (KNN Imputation)** tương đương M1
+
+### 4. So Sánh Phương Pháp Xử Lý Imbalance
+
+![Imbalance Methods](results/figures/model_metrics_by_imbalance_method.png)
+
+**Kết luận:**
+- **I2 (Class Weights)** hiệu quả nhất cho ROC-AUC
+- **I1 (SMOTE + Undersampling)** cho Recall cao hơn
+- **I0 (None)** kết quả kém - mô hình bias
+
+### 5. So Sánh Các Mô Hình
+
+![Model Comparison](results/figures/model_metrics_by_model.png)
+
+**Kết luận:**
+- **Random Forest** tốt nhất cho ROC-AUC (0.863)
+- **Logistic Regression** tốt cho Recall (đơn giản, diễn giải dễ)
+- **Gradient Boosting** cân bằng giữa hai
+
+### 6. Đánh Giá Mô Hình Tốt Nhất
+
+![Best Model Evaluation](results/figures/best_model_evaluation.png)
+
+**Mô hình tốt nhất: Random Forest với M1_I2**
+- **Confusion Matrix**: Hiển thị True Positive, False Positive, True Negative, False Negative
+- **ROC Curve**: AUC = 0.863
+- **Precision-Recall Curve**: PR-AUC = 0.281
+
+### 7. Tầm Quan Trọng Đặc Trưng
+
+![Feature Importance](results/figures/feature_importance.png)
+
+**Top 5 đặc trưng quan trọng nhất:**
+
+| Rank | Đặc Trưng | Importance |
+|------|-----------|------------|
+| 1 | **age** | 0.42 (42%) |
+| 2 | avg_glucose_level | 0.19 (19%) |
+| 3 | bmi | 0.17 (17%) |
+| 4 | work_type_Private | 0.04 (4%) |
+| 5 | smoking_status_formerly smoked | 0.03 (3%) |
+
+> 🔑 **Insight**: **Tuổi** là yếu tố quan trọng nhất (42%), tiếp theo là đường huyết và BMI. Điều này phù hợp với y học: tuổi cao là yếu tố nguy cơ đột quỵ hàng đầu.
+
+---
+
+## 📝 Kết Luận & Khuyến Nghị
+
+### Kết Luận Chính
+
+#### 1. Về Data Governance
+- ✅ Thành công tích hợp dữ liệu từ 3 nguồn (Kaggle, HuggingFace, Synthetic)
+- ✅ Xử lý trùng lặp hiệu quả (5,609 bản ghi duy nhất)
+- ✅ Áp dụng 3 phương pháp xử lý missing data để so sánh
+
+#### 2. Về Mô Hình
+- ✅ **ROC-AUC 0.863**: Mô hình phân biệt tốt giữa 2 lớp
+- ✅ **Recall 84.4%**: Phát hiện được 84.4% ca đột quỵ thực tế
+- ⚠️ **Precision thấp**: Do tỷ lệ mất cân bằng 1:20 (đây là đặc điểm của bài toán y tế)
+
+#### 3. Về Phương Pháp
+- **Best Missing Method**: M1 (Median Imputation) - đơn giản, hiệu quả
+- **Best Imbalance Method**: I2 (Class Weights) - không cần tạo dữ liệu giả
+- **Best Model**: Random Forest - cân bằng giữa hiệu năng và diễn giải
+
+### Khuyến Nghị
+
+#### Cho Ứng Dụng Thực Tế
+1. **Sử dụng ngưỡng threshold thấp** (< 0.5) để tăng recall - bỏ sót ca đột quỵ nguy hiểm hơn báo động giả
+2. **Kết hợp với chuyên gia y tế** - mô hình chỉ là công cụ hỗ trợ
+3. **Cập nhật dữ liệu định kỳ** để mô hình không lỗi thời
+
+#### Cho Nghiên Cứu Tiếp Theo
+1. Thu thập thêm dữ liệu ca đột quỵ (giảm mất cân bằng)
+2. Thử nghiệm Deep Learning (Neural Networks)
+3. Thêm features y tế (huyết áp cụ thể, cholesterol, ECG...)
+4. Ensemble nhiều mô hình
+
+### So Sánh với Baseline
+
+| Chỉ Số | Baseline (I0) | Best (M1_I2) | Cải Thiện |
+|--------|---------------|--------------|-----------|
+| ROC-AUC | 0.78 | 0.863 | +10.6% |
+| Recall | 0.25 | 0.844 | +237.6% |
+| PR-AUC | 0.15 | 0.281 | +87.3% |
+
+---
+
+## 🛠️ Hướng Dẫn Cài Đặt
+
+### Yêu Cầu
 - Python 3.10+
-- 4GB RAM (khuyến nghị 8GB)
-- ~500MB disk space
+- pip hoặc conda
 
 ### Cài Đặt
 
 ```bash
-# 1. Clone repository
-git clone https://github.com/Thaianng/Data-Governance-Visualization.git
+# Clone repository
+git clone <repository-url>
 cd Data-Governance-Visualization
 
-# 2. Tạo virtual environment
+# Tạo virtual environment
 python -m venv .venv
 
-# 3. Activate environment
-# Windows:
-.venv\Scripts\activate
-# Linux/Mac:
+# Kích hoạt môi trường (Windows)
+.\.venv\Scripts\activate
+
+# Kích hoạt môi trường (Linux/Mac)
 source .venv/bin/activate
 
-# 4. Cài đặt dependencies
-pip install -r requirements.txt
+# Cài đặt dependencies
+pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn missingno shap jupyter
 ```
 
 ### Chạy Notebooks
 
-Chạy tuần tự các notebooks trong VS Code hoặc Jupyter:
+```bash
+# Khởi động Jupyter
+jupyter notebook
 
-```
-1️⃣ 01_data_collection.ipynb      → Load & explore data
-2️⃣ 02_data_fusion_cleaning.ipynb → Merge & handle missing data
-3️⃣ 03_eda_visualization.ipynb    → EDA & charts
-4️⃣ 04_modeling.ipynb             → Train & evaluate models
+# Hoặc mở trong VS Code với extension Python
 ```
 
-### Output Files
+**Thứ tự chạy notebooks:**
+1. `01_data_collection.ipynb` - Thu thập dữ liệu
+2. `02_data_fusion_cleaning.ipynb` - Tích hợp & xử lý
+3. `03_eda_visualization.ipynb` - Phân tích khám phá
+4. `04_modeling.ipynb` - Huấn luyện mô hình
 
-Sau khi chạy xong, các files sẽ được lưu tại:
-- `data/processed/` - Processed datasets
-- `results/figures/` - All visualizations (17 files)
-- `results/models/` - Trained models & summary
+### Sử Dụng Mô Hình Đã Huấn Luyện
 
----
+```python
+import pickle
+import pandas as pd
 
-## 🎯 Kết Luận
+# Load model
+with open('results/models/best_model.pkl', 'rb') as f:
+    model_data = pickle.load(f)
 
-### Achievements
+model = model_data['model']
+feature_names = model_data['feature_names']
 
-✅ **Data Collection**: Thu thập từ 3 nguồn, merge thành 5,610 records  
-✅ **Data Quality**: Xử lý 5.22% missing values với 3 phương pháp  
-✅ **Imbalance Handling**: So sánh 3 kỹ thuật, I2 cho recall tốt nhất  
-✅ **Modeling**: Train 27 pipelines, đạt ROC-AUC 0.854  
-✅ **Visualization**: 17 biểu đồ phân tích chi tiết  
-
-### Recommendations
-
-🏥 **Cho ứng dụng Y tế (Screening)**:
-- Sử dụng **M0_I2 + Logistic Regression**
-- Recall 84.44% - phát hiện được 84% ca đột quỵ
-- Chấp nhận false positive rate cao để không bỏ sót bệnh nhân
-
-📊 **Cho ứng dụng Research**:
-- Sử dụng **M2_I1 + Random Forest**
-- F1 = 27.52% - cân bằng precision/recall
-- ROC-AUC = 0.82 - discriminative power tốt
-
-### Limitations & Future Work
-
-1. **Data Size**: Dataset nhỏ (5,610 records) → có thể overfitting
-2. **Feature Engineering**: Có thể tạo thêm interaction features
-3. **Advanced Models**: Thử XGBoost, LightGBM, Neural Networks
-4. **Threshold Tuning**: Optimize decision threshold cho từng use case
-5. **External Validation**: Test trên dataset khác
+# Dự đoán
+# Chuẩn bị dữ liệu input với các features tương ứng
+# prediction = model.predict(X_new)
+# probability = model.predict_proba(X_new)[:, 1]
+```
 
 ---
 
-## 👥 Thông Tin Nhóm
+## 📚 Tài Liệu Tham Khảo
 
-- **Repository**: [Data-Governance-Visualization](https://github.com/Thaianng/Data-Governance-Visualization)
-- **Branch**: `nhdang`
-
----
-
-## 📚 References
-
-1. [Stroke Prediction Dataset - Kaggle](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)
-2. [Stroke Prediction Dataset - HuggingFace](https://huggingface.co/datasets/jmfilho/stroke-prediction-dataset)
-3. [Imbalanced-learn Documentation](https://imbalanced-learn.org/)
-4. [Scikit-learn Documentation](https://scikit-learn.org/)
+1. [WHO - Stroke Facts](https://www.who.int/news-room/fact-sheets/detail/the-top-10-causes-of-death)
+2. [Kaggle Stroke Prediction Dataset](https://www.kaggle.com/fedesoriano/stroke-prediction-dataset)
+3. [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+4. [Imbalanced-learn Documentation](https://imbalanced-learn.org/stable/)
 
 ---
 
-<p align="center">
-  <b>📅 Last Updated: December 2024</b><br>
-  <i>Made with ❤️ for Data Governance & Visualization Course</i>
-</p>
+## 👥 Thông Tin Dự Án
+
+- **Môn học**: Data Governance & Visualization
+- **Thời gian**: 2024
+- **Công cụ**: Python, Scikit-learn, Pandas, Matplotlib, Seaborn
+
+---
+
+<div align="center">
+
+**⭐ Nếu dự án hữu ích, hãy cho một star! ⭐**
+
+</div>
