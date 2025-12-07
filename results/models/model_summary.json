@@ -1,33 +1,33 @@
 {
-  "best_pipeline": "M1_I0",
-  "best_model": "Gradient Boosting",
+  "best_pipeline": "M1_I2",
+  "best_model": "Random Forest",
   "metrics": {
-    "ROC-AUC": 0.8540452906089611,
-    "PR-AUC": 0.19078241185820224,
-    "F1-Score": 0.0,
-    "Recall": 0.0,
-    "Precision": 0.0
+    "ROC-AUC": 0.8629317519766958,
+    "PR-AUC": 0.2805514681792722,
+    "F1-Score": 0.2465753424657534,
+    "Recall": 0.16666666666666666,
+    "Precision": 0.47368421052631576
   },
   "top_features": [
     {
+      "Feature": "age",
+      "Importance": 0.4183902770795745
+    },
+    {
       "Feature": "avg_glucose_level",
-      "Importance": 0.2849214600787679
+      "Importance": 0.1910503715119619
     },
     {
       "Feature": "bmi",
-      "Importance": 0.23410583968088783
-    },
-    {
-      "Feature": "age",
-      "Importance": 0.2319607929588862
+      "Importance": 0.17225406931807294
     },
     {
       "Feature": "smoking_status_encoded",
-      "Importance": 0.0712717759579888
+      "Importance": 0.05115356843484463
     },
     {
       "Feature": "work_type_encoded",
-      "Importance": 0.048232609532758104
+      "Importance": 0.047243035053980385
     }
   ]
 }
