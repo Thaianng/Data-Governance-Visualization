@@ -1,0 +1,9 @@
+{
+  "total_samples": 5609,
+  "stroke_count": 271,
+  "stroke_rate": 4.83,
+  "imbalance_ratio": 19.7,
+  "missing_bmi_pct": 5.22,
+  "mean_age_stroke": 67.7,
+  "mean_age_no_stroke": 41.8
+}

@@ -1,0 +1,67 @@
+{
+  "datasets": [
+    {
+      "filename": "stroke_kaggle.csv",
+      "source": "Kaggle",
+      "url": "https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset",
+      "license": "CC0 Public Domain",
+      "description": "Stroke Prediction Dataset - used to predict whether a patient is likely to get stroke based on input parameters",
+      "columns": [
+        "id",
+        "gender",
+        "age",
+        "hypertension",
+        "heart_disease",
+        "ever_married",
+        "work_type",
+        "Residence_type",
+        "avg_glucose_level",
+        "bmi",
+        "smoking_status",
+        "stroke"
+      ]
+    },
+    {
+      "filename": "stroke_huggingface.csv",
+      "source": "HuggingFace",
+      "url": "https://huggingface.co/datasets/Nnaodeh/Stroke_Prediction_Dataset",
+      "license": "CC0",
+      "description": "Stroke Prediction Dataset from HuggingFace Datasets Hub",
+      "columns": [
+        "id",
+        "gender",
+        "age",
+        "hypertension",
+        "heart_disease",
+        "ever_married",
+        "work_type",
+        "Residence_type",
+        "avg_glucose_level",
+        "bmi",
+        "smoking_status",
+        "stroke"
+      ]
+    },
+    {
+      "filename": "stroke_synthetic.csv",
+      "source": "Synthetic",
+      "url": "N/A",
+      "license": "N/A",
+      "description": "Synthetic dataset generated from base data for data fusion demonstration",
+      "columns": [
+        "id",
+        "gender",
+        "age",
+        "hypertension",
+        "heart_disease",
+        "ever_married",
+        "work_type",
+        "Residence_type",
+        "avg_glucose_level",
+        "bmi",
+        "smoking_status",
+        "stroke"
+      ]
+    }
+  ]
+}

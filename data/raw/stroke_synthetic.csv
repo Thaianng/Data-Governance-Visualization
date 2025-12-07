@@ -1,0 +1,501 @@
+id,gender,age,hypertension,heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status,stroke
+100000,Female,46,0,0,Yes,Private,Rural,100.97283989275425,50.3,smokes,0
+100001,Male,79,0,0,Yes,Self-employed,Rural,206.73480375065353,,formerly smoked,0
+100002,Female,1,0,0,No,children,Urban,92.10711549899628,,Unknown,0
+100003,Female,62,1,0,Yes,Private,Rural,184.1434744018558,,smokes,0
+100004,Male,41,0,0,Yes,Govt_job,Rural,110.9889812361925,30.6,never smoked,0
+100005,Female,44,0,0,Yes,Self-employed,Urban,61.031614395603405,25.0,formerly smoked,0
+100006,Female,30,0,0,Yes,Self-employed,Urban,66.13497478599228,20.2,Unknown,0
+100007,Male,20,0,0,No,Private,Urban,76.49384477117701,22.0,smokes,0
+100008,Female,75,1,0,Yes,Private,Rural,205.93572145730712,36.5,never smoked,1
+100009,Female,31,0,0,Yes,Private,Urban,118.42139972846732,44.0,smokes,0
+100010,Male,43,0,0,Yes,Private,Rural,118.94813182904143,26.1,smokes,0
+100011,Female,17,0,0,No,Private,Rural,83.50215391139493,,Unknown,0
+100012,Male,77,1,1,No,Self-employed,Urban,79.45549488965723,30.4,smokes,0
+100013,Female,40,0,0,Yes,Private,Rural,87.67348053515802,29.3,never smoked,0
+100014,Female,79,0,0,Yes,Private,Urban,55.54859233247932,28.1,never smoked,0
+100015,Female,20,0,0,No,Private,Rural,94.32202434895872,40.4,smokes,0
+100016,Male,12,0,0,No,children,Rural,87.1931511261322,24.4,Unknown,0
+100017,Female,35,0,0,Yes,Govt_job,Urban,68.8121473253652,,never smoked,0
+100018,Male,42,0,0,Yes,Private,Rural,116.96500492814076,29.4,Unknown,0
+100019,Female,30,0,0,Yes,Private,Urban,72.1964595926121,42.7,never smoked,0
+100020,Female,32,0,0,No,Private,Urban,84.04322398476585,,smokes,0
+100021,Female,56,0,0,Yes,Govt_job,Rural,107.42011155774492,23.1,never smoked,0
+100022,Female,26,0,0,Yes,Private,Rural,93.65536290347568,,smokes,0
+100023,Female,63,0,0,Yes,Self-employed,Rural,92.25819492166605,26.6,smokes,0
+100024,Male,17,0,0,No,Govt_job,Urban,111.81277978437703,29.6,never smoked,0
+100025,Female,35,0,0,Yes,Private,Rural,87.47409746184051,42.1,smokes,0
+100026,Female,11,0,0,No,children,Urban,86.70452208213057,,never smoked,0
+100027,Male,61,0,1,Yes,Private,Urban,214.78451264008152,,Unknown,1
+100028,Male,56,1,0,Yes,Self-employed,Urban,185.79168643907818,34.4,smokes,0
+100029,Male,47,0,0,Yes,Govt_job,Urban,252.44300139910894,,formerly smoked,0
+100030,Female,53,0,0,Yes,Govt_job,Urban,93.06260015748684,25.0,formerly smoked,0
+100031,Female,26,0,0,No,Private,Rural,77.95003044998182,,never smoked,0
+100032,Male,37,0,0,No,Private,Urban,61.29859473575236,49.5,formerly smoked,0
+100033,Female,27,0,0,Yes,Govt_job,Urban,87.67522880839746,,smokes,0
+100034,Female,75,0,0,No,Self-employed,Urban,83.14612872693482,39.2,Unknown,0
+100035,Male,32,1,0,Yes,Private,Rural,97.01016531107553,32.5,never smoked,0
+100036,Male,44,1,0,Yes,Self-employed,Rural,88.48504247989855,37.2,formerly smoked,0
+100037,Female,67,0,0,No,Self-employed,Urban,92.71253706250523,36.4,formerly smoked,0
+100038,Female,55,0,0,Yes,Govt_job,Urban,81.20644426895771,23.1,Unknown,0
+100039,Male,43,0,0,Yes,Private,Urban,85.46415556386404,30.9,never smoked,0
+100040,Female,24,0,0,No,Self-employed,Rural,109.50776955719029,,never smoked,0
+100041,Female,62,0,0,Yes,Self-employed,Rural,134.3693181775551,34.0,smokes,0
+100042,Female,82,0,0,Yes,Self-employed,Urban,95.159230208513,26.1,Unknown,0
+100043,Male,60,0,0,Yes,Private,Rural,182.12255885002767,34.5,formerly smoked,1
+100044,Male,57,0,0,No,Govt_job,Rural,111.22505201330061,38.5,smokes,0
+100045,Female,41,0,0,Yes,Private,Rural,115.36877673095522,25.5,never smoked,0
+100046,Male,64,0,0,Yes,Self-employed,Rural,210.25211309515612,34.5,never smoked,0
+100047,Female,61,0,0,Yes,Private,Rural,123.11298440064016,29.4,formerly smoked,0
+100048,Male,35,0,0,Yes,Private,Rural,105.19865390724905,34.3,never smoked,0
+100049,Male,60,0,0,Yes,Private,Rural,65.94456789987025,,Unknown,0
+100050,Male,17,0,0,No,Self-employed,Urban,105.0054427267283,23.4,Unknown,0
+100051,Male,57,0,0,Yes,Govt_job,Urban,149.2920453876635,30.6,never smoked,0
+100052,Male,48,0,0,No,Govt_job,Urban,82.4305277250595,,never smoked,1
+100053,Male,54,1,0,Yes,Private,Urban,212.27702755461544,28.0,formerly smoked,0
+100054,Female,63,1,0,Yes,Govt_job,Urban,139.58680771985473,38.8,never smoked,0
+100055,Male,68,0,0,Yes,Private,Urban,103.37069960058082,,formerly smoked,0
+100056,Male,60,1,0,Yes,Private,Rural,206.32873027126203,21.9,smokes,0
+100057,Female,49,0,0,Yes,Private,Urban,120.05557863517788,23.1,never smoked,0
+100058,Female,38,0,0,Yes,Govt_job,Urban,63.993887009638286,,never smoked,0
+100059,Female,63,1,1,No,Govt_job,Urban,176.66787951638898,24.3,never smoked,0
+100060,Male,29,0,0,No,Private,Rural,94.84577103927248,28.0,never smoked,0
+100061,Female,33,0,0,Yes,Private,Urban,98.85393273448084,25.7,Unknown,0
+100062,Female,36,0,0,Yes,Private,Rural,106.54932425873622,33.2,smokes,0
+100063,Male,15,0,0,No,Private,Rural,114.2713122707968,25.0,never smoked,0
+100064,Male,66,0,1,Yes,Private,Urban,76.86560557481778,,smokes,1
+100065,Female,76,0,0,No,Govt_job,Rural,87.08160877069072,34.6,never smoked,0
+100066,Female,40,0,0,Yes,Private,Urban,214.87891489626313,,smokes,0
+100067,Male,1,0,0,No,children,Urban,108.97707325736035,18.9,Unknown,0
+100068,Female,34,0,0,No,Private,Rural,74.89928185325964,,smokes,0
+100069,Male,66,0,0,Yes,Self-employed,Urban,244.7770790921294,32.2,smokes,0
+100070,Male,52,0,0,Yes,Private,Rural,83.9565483069231,31.4,never smoked,0
+100071,Male,3,0,0,No,children,Urban,123.19703580582907,20.1,Unknown,0
+100072,Female,26,0,0,Yes,Private,Rural,149.35482181197364,28.6,never smoked,0
+100073,Female,51,0,0,Yes,Self-employed,Urban,148.22274031107298,44.7,formerly smoked,0
+100074,Female,79,0,1,No,Private,Urban,226.26674689589154,24.9,never smoked,0
+100075,Male,29,0,0,No,Private,Urban,115.30295590445672,31.4,never smoked,0
+100076,Male,29,0,0,No,Private,Rural,83.52158991037527,27.3,never smoked,0
+100077,Female,16,0,0,No,Private,Rural,112.39709887589642,30.8,never smoked,0
+100078,Female,37,0,0,Yes,Private,Urban,90.46881919683146,29.6,formerly smoked,0
+100079,Male,45,0,0,Yes,Private,Rural,67.68713686433323,34.4,Unknown,0
+100080,Female,52,0,0,Yes,Private,Rural,80.82508966508357,35.6,formerly smoked,0
+100081,Male,76,0,0,Yes,Self-employed,Urban,178.00064329012764,44.3,Unknown,0
+100082,Female,11,0,0,No,Private,Urban,125.28673308872901,22.8,never smoked,0
+100083,Male,50,0,0,Yes,Govt_job,Urban,89.3466118767264,36.3,never smoked,0
+100084,Male,75,0,0,Yes,Private,Urban,105.00744822934817,,Unknown,1
+100085,Male,69,1,0,Yes,Private,Rural,100.71451862607299,33.6,never smoked,0
+100086,Female,57,0,0,Yes,Private,Rural,109.08099068019904,,Unknown,0
+100087,Female,51,0,0,Yes,Private,Urban,66.44436548156149,21.7,never smoked,0
+100088,Female,38,0,0,Yes,Private,Rural,90.76143859020081,30.2,never smoked,0
+100089,Male,25,0,0,Yes,Private,Rural,127.77253566027221,22.3,smokes,0
+100090,Female,75,1,0,Yes,Self-employed,Rural,203.51484181141075,26.1,never smoked,0
+100091,Female,30,0,0,Yes,Private,Urban,133.7125472330546,27.4,never smoked,0
+100092,Male,28,0,0,No,Govt_job,Rural,62.04221765046999,41.1,smokes,0
+100093,Male,39,0,0,Yes,Private,Rural,147.6915032766394,31.8,formerly smoked,0
+100094,Female,25,0,0,No,Private,Rural,81.76383683710755,,smokes,0
+100095,Male,76,0,0,Yes,Private,Urban,182.90453279763474,,Unknown,1
+100096,Female,41,0,0,Yes,Private,Rural,91.68704467613048,43.8,never smoked,0
+100097,Female,40,0,0,Yes,Private,Urban,76.1602152577034,,smokes,0
+100098,Female,59,0,0,Yes,Govt_job,Rural,250.3789650971654,37.3,never smoked,0
+100099,Female,39,0,0,Yes,Private,Urban,82.49609123156358,36.0,smokes,0
+100100,Female,22,0,0,No,Private,Urban,62.08566385449471,,smokes,0
+100101,Female,41,0,0,Yes,Private,Urban,84.14089992898307,,Unknown,0
+100102,Female,57,0,0,Yes,Private,Urban,84.33631749859771,27.0,never smoked,0
+100103,Male,29,0,0,Yes,Govt_job,Urban,83.97484700588939,,formerly smoked,0
+100104,Female,23,0,0,No,Govt_job,Urban,64.72969674146876,,smokes,0
+100105,Female,41,0,0,Yes,Private,Urban,82.60879185060827,,formerly smoked,0
+100106,Male,77,0,1,Yes,Private,Rural,225.75046628924844,22.0,never smoked,0
+100107,Female,16,0,0,No,Private,Urban,54.50813095216225,24.2,formerly smoked,0
+100108,Female,55,0,0,Yes,Private,Urban,72.87078152728411,32.6,never smoked,0
+100109,Female,58,0,0,Yes,Private,Urban,97.95211875064521,27.1,never smoked,0
+100110,Female,58,0,0,Yes,Govt_job,Urban,101.7252402923434,32.5,Unknown,0
+100111,Male,45,0,0,Yes,Private,Rural,101.81249738927012,29.3,formerly smoked,0
+100112,Male,39,0,0,Yes,Govt_job,Rural,62.41800473306802,23.8,Unknown,0
+100113,Female,76,0,0,Yes,Private,Rural,98.9415706944059,23.4,never smoked,1
+100114,Female,2,0,0,No,children,Rural,100.39986099583756,19.1,Unknown,0
+100115,Male,42,0,0,Yes,Private,Urban,89.72194043379918,,formerly smoked,0
+100116,Male,13,0,0,No,children,Rural,73.34014450053333,18.0,Unknown,0
+100117,Female,72,0,0,Yes,Self-employed,Urban,234.79945775647388,35.8,never smoked,0
+100118,Female,34,0,0,Yes,Private,Rural,60.69767182869286,28.3,never smoked,0
+100119,Male,28,0,0,Yes,Private,Urban,81.13356447299353,,Unknown,0
+100120,Female,75,0,0,Yes,Self-employed,Urban,83.00800713771199,,never smoked,0
+100121,Female,44,0,0,No,Private,Rural,85.82921369263272,24.2,Unknown,0
+100122,Female,48,0,0,Yes,Self-employed,Urban,199.38695601329104,46.9,never smoked,0
+100123,Male,60,0,0,Yes,Private,Rural,213.22457328280146,35.1,formerly smoked,0
+100124,Female,56,0,0,Yes,Self-employed,Urban,79.86201177958661,16.1,never smoked,0
+100125,Female,48,0,0,Yes,Private,Rural,72.48824136220618,33.0,never smoked,0
+100126,Female,61,1,0,Yes,Govt_job,Urban,229.58636996047667,22.0,never smoked,0
+100127,Male,33,0,0,Yes,Private,Urban,82.81915233673847,,Unknown,0
+100128,Male,14,0,0,No,children,Rural,127.1247482907526,17.6,never smoked,0
+100129,Female,13,0,0,No,children,Urban,74.19091930118755,20.2,Unknown,0
+100130,Male,47,0,0,Yes,Self-employed,Rural,215.35413983644503,58.1,never smoked,0
+100131,Female,74,0,0,Yes,Private,Urban,253.23339449322694,32.9,never smoked,0
+100132,Female,25,0,0,Yes,Govt_job,Urban,70.14763942143671,,never smoked,0
+100133,Female,54,1,0,Yes,Private,Rural,220.40055396514296,31.4,smokes,0
+100134,Female,60,0,0,Yes,Private,Rural,114.47460575809555,29.4,formerly smoked,0
+100135,Female,43,0,0,Yes,Private,Urban,222.4976460407326,,smokes,0
+100136,Female,60,0,0,Yes,Private,Urban,113.58848821607431,32.5,never smoked,0
+100137,Female,80,0,0,Yes,Private,Urban,264.3329583158813,47.5,Unknown,0
+100138,Male,59,0,0,Yes,Private,Rural,71.66725346377703,32.2,Unknown,0
+100139,Male,57,0,0,Yes,Private,Urban,78.64753219153783,35.9,Unknown,0
+100140,Male,37,0,0,Yes,Self-employed,Rural,94.17767280232204,34.3,never smoked,0
+100141,Female,51,1,0,Yes,Private,Rural,103.21708560017315,,never smoked,0
+100142,Male,61,0,0,Yes,Govt_job,Urban,108.38722759867544,,never smoked,0
+100143,Female,69,1,0,Yes,Govt_job,Urban,221.49152530132432,32.6,formerly smoked,0
+100144,Male,78,0,0,Yes,Self-employed,Urban,121.9952116970147,24.3,formerly smoked,0
+100145,Male,53,0,1,Yes,Private,Rural,204.88003757588513,32.0,Unknown,0
+100146,Female,22,0,0,No,Private,Urban,59.602643057127736,27.1,formerly smoked,0
+100147,Female,19,0,0,No,Private,Rural,109.07117215449473,28.8,Unknown,0
+100148,Male,22,0,0,No,Private,Urban,67.0460769794073,19.8,Unknown,0
+100149,Female,57,1,0,No,Self-employed,Urban,105.50940432910815,20.2,formerly smoked,0
+100150,Female,56,0,0,Yes,Self-employed,Urban,66.30842049355655,51.7,never smoked,0
+100151,Female,36,0,0,Yes,Private,Rural,84.42224897881952,24.3,never smoked,0
+100152,Female,62,0,0,Yes,Private,Urban,86.3210441491079,,formerly smoked,0
+100153,Female,36,0,0,Yes,Private,Urban,96.9794834252512,28.6,never smoked,0
+100154,Female,42,0,0,Yes,Govt_job,Urban,119.50643548988724,23.3,smokes,0
+100155,Female,43,0,0,Yes,Private,Rural,97.8337602069761,30.2,never smoked,0
+100156,Female,8,0,0,No,children,Rural,53.3381656678522,17.6,Unknown,0
+100157,Female,32,0,0,Yes,Private,Rural,112.3845926905447,25.1,never smoked,0
+100158,Female,56,0,0,Yes,Govt_job,Urban,193.83693680750923,29.1,smokes,0
+100159,Female,20,0,0,Yes,Private,Urban,53.72120673371043,26.3,smokes,0
+100160,Female,56,0,0,Yes,Govt_job,Urban,58.88097176514277,28.5,never smoked,0
+100161,Female,27,0,0,Yes,Private,Rural,87.54414656144297,36.6,Unknown,0
+100162,Female,13,0,0,No,Private,Urban,91.27800158650832,28.7,never smoked,0
+100163,Male,21,0,0,Yes,Private,Urban,120.08457561784965,25.3,never smoked,0
+100164,Female,27,0,0,Yes,Private,Urban,80.33023856870787,38.6,never smoked,0
+100165,Male,12,0,0,No,children,Urban,109.8528864385802,20.4,Unknown,0
+100166,Male,52,1,0,Yes,Private,Urban,220.2239746090943,28.0,formerly smoked,0
+100167,Female,27,0,0,Yes,Private,Rural,78.04635310807457,23.2,smokes,0
+100168,Male,48,0,0,Yes,Private,Urban,73.7339830176715,38.9,smokes,0
+100169,Male,52,0,0,Yes,Self-employed,Urban,78.74362290575671,25.8,formerly smoked,0
+100170,Female,57,0,0,Yes,Govt_job,Urban,229.33035826170334,29.9,never smoked,0
+100171,Female,47,0,0,Yes,Self-employed,Urban,94.8988583899453,24.9,never smoked,0
+100172,Female,63,0,0,Yes,Self-employed,Rural,67.54382807947552,,formerly smoked,0
+100173,Female,25,0,0,No,Private,Urban,104.08265131575709,33.4,Unknown,0
+100174,Male,46,0,0,No,Private,Urban,105.11822617479403,,formerly smoked,0
+100175,Female,43,0,0,Yes,Private,Rural,70.37015752002202,37.2,smokes,0
+100176,Female,56,1,0,Yes,Govt_job,Rural,88.59379990105084,38.8,smokes,0
+100177,Female,16,0,0,No,children,Urban,188.07899707114044,22.0,never smoked,0
+100178,Female,74,0,0,Yes,Self-employed,Rural,107.97686526849523,32.0,never smoked,1
+100179,Female,14,0,0,No,Private,Urban,119.97842861267009,27.5,formerly smoked,0
+100180,Female,9,0,0,No,children,Urban,97.04821010217204,20.3,Unknown,0
+100181,Female,40,0,0,Yes,Self-employed,Urban,95.45582781356158,23.5,formerly smoked,0
+100182,Female,32,0,0,No,Private,Rural,105.07355436586002,34.3,never smoked,0
+100183,Female,44,0,0,Yes,Private,Urban,85.58633682912769,28.0,Unknown,0
+100184,Female,61,0,0,Yes,Private,Urban,63.91630369920174,18.7,formerly smoked,0
+100185,Male,29,0,0,Yes,Self-employed,Urban,149.98063222294425,24.3,never smoked,0
+100186,Male,67,0,0,Yes,Private,Rural,100.7922331361359,28.5,Unknown,1
+100187,Female,66,0,0,Yes,Private,Urban,86.0248538542175,14.1,never smoked,0
+100188,Male,51,0,0,Yes,Govt_job,Rural,92.63193220027733,26.7,Unknown,0
+100189,Male,38,0,0,Yes,Private,Rural,150.83171801681968,29.8,smokes,0
+100190,Male,46,0,0,Yes,Govt_job,Rural,112.76552715319335,38.9,formerly smoked,0
+100191,Male,35,0,0,Yes,Private,Rural,73.06764788439432,29.9,never smoked,0
+100192,Female,52,0,0,Yes,Private,Urban,94.49394065634326,,formerly smoked,0
+100193,Female,14,0,0,No,children,Urban,82.485996046924,21.5,Unknown,0
+100194,Male,27,0,0,No,Private,Urban,136.77260872625266,36.6,formerly smoked,0
+100195,Male,0,0,0,No,children,Urban,77.95812181910432,20.3,Unknown,0
+100196,Male,76,0,0,Yes,Self-employed,Urban,72.6796380316525,,smokes,0
+100197,Male,21,0,0,No,Private,Rural,90.44910783462647,28.1,smokes,0
+100198,Male,41,0,0,Yes,Private,Rural,50.0,26.6,never smoked,0
+100199,Female,23,0,0,Yes,Private,Urban,60.761141659456776,33.5,never smoked,0
+100200,Male,65,0,0,Yes,Self-employed,Urban,65.2265269180568,,formerly smoked,1
+100201,Female,74,0,0,Yes,Govt_job,Rural,70.17165946401917,30.3,never smoked,0
+100202,Female,12,0,0,No,Private,Urban,127.488354880355,34.2,never smoked,0
+100203,Male,59,0,0,No,Private,Rural,70.48299996061421,22.2,formerly smoked,0
+100204,Male,75,0,0,Yes,Private,Urban,222.60645407739017,29.4,formerly smoked,0
+100205,Female,43,0,0,Yes,Self-employed,Rural,100.56270358611863,25.0,formerly smoked,0
+100206,Male,49,0,0,Yes,Self-employed,Rural,110.85543170100712,35.2,smokes,0
+100207,Male,0,0,0,No,children,Urban,87.09323669674032,,Unknown,0
+100208,Female,25,0,0,No,Govt_job,Rural,118.990034781682,26.5,never smoked,0
+100209,Male,23,0,0,No,Private,Urban,63.160313267182616,,smokes,0
+100210,Female,35,0,0,Yes,Private,Rural,130.07517972730417,28.7,never smoked,0
+100211,Male,20,0,0,No,Private,Rural,75.34207434801594,24.2,formerly smoked,0
+100212,Male,39,0,0,Yes,Govt_job,Urban,120.25623462576655,30.6,Unknown,0
+100213,Female,61,0,0,Yes,Govt_job,Urban,62.704159261224106,31.5,formerly smoked,0
+100214,Female,36,0,0,Yes,Private,Rural,77.4922312260528,26.1,formerly smoked,0
+100215,Female,71,0,0,Yes,Private,Rural,74.81195939702741,,Unknown,0
+100216,Female,49,0,0,Yes,Self-employed,Urban,138.31813537700626,44.7,formerly smoked,0
+100217,Male,81,0,0,Yes,Private,Urban,250.08986763290034,25.3,formerly smoked,0
+100218,Female,16,0,0,No,Private,Urban,89.69234336997658,46.0,formerly smoked,0
+100219,Female,49,0,0,Yes,Govt_job,Urban,67.7262511979018,30.7,never smoked,0
+100220,Male,67,0,0,Yes,Private,Rural,101.36451818559972,29.0,formerly smoked,0
+100221,Male,47,0,0,Yes,Private,Rural,68.89098302612155,32.8,formerly smoked,0
+100222,Male,83,0,0,No,Self-employed,Urban,178.78927691457866,30.8,never smoked,0
+100223,Female,39,0,0,Yes,Govt_job,Urban,54.8411573713106,25.4,never smoked,0
+100224,Female,4,0,0,No,children,Urban,112.08680833431295,24.8,Unknown,0
+100225,Male,20,0,0,No,Private,Urban,80.20491530499294,23.0,Unknown,0
+100226,Male,58,0,0,Yes,Self-employed,Urban,80.3537270005918,32.2,formerly smoked,0
+100227,Male,56,0,1,Yes,Self-employed,Urban,236.64659937486672,,formerly smoked,0
+100228,Female,22,0,0,No,Private,Urban,118.59322878413418,28.2,never smoked,0
+100229,Male,53,0,0,Yes,Private,Rural,50.0,27.5,never smoked,0
+100230,Male,21,0,0,No,Private,Rural,77.67540349725896,26.2,never smoked,0
+100231,Female,48,0,0,Yes,Govt_job,Urban,118.04091354147451,,Unknown,0
+100232,Female,57,0,0,Yes,Private,Urban,76.3643729849047,28.4,never smoked,0
+100233,Female,23,0,0,Yes,Self-employed,Rural,118.4980353343741,30.1,smokes,0
+100234,Male,80,0,0,Yes,Private,Urban,85.38030186282738,29.0,never smoked,0
+100235,Male,21,0,0,No,Private,Rural,108.07673765823907,,never smoked,0
+100236,Male,9,0,0,No,children,Rural,54.8869484615458,16.4,Unknown,0
+100237,Female,43,0,0,Yes,Private,Rural,80.99376632061947,34.0,formerly smoked,0
+100238,Male,70,0,0,Yes,Private,Rural,67.73445929008554,31.1,never smoked,0
+100239,Male,13,0,0,No,Never_worked,Rural,173.00729019259364,19.1,Unknown,0
+100240,Female,37,0,0,No,Govt_job,Rural,81.64600154594432,20.4,Unknown,0
+100241,Male,26,0,0,Yes,Private,Urban,146.39385667913893,25.3,never smoked,0
+100242,Male,57,1,0,Yes,Govt_job,Urban,86.63698710648345,27.7,formerly smoked,1
+100243,Female,35,0,0,Yes,Self-employed,Urban,178.10457379369925,41.4,smokes,0
+100244,Male,56,1,1,Yes,Private,Rural,76.40765700372104,32.1,smokes,0
+100245,Male,64,0,0,Yes,Private,Urban,63.66286221221901,,smokes,0
+100246,Female,23,0,0,No,Private,Urban,55.03559058596868,,never smoked,0
+100247,Female,16,0,0,No,Private,Rural,57.46330105373856,35.1,never smoked,0
+100248,Male,29,0,0,Yes,Private,Rural,58.99318524279094,31.4,smokes,0
+100249,Male,73,1,0,Yes,Self-employed,Rural,219.5682678737852,34.5,formerly smoked,0
+100250,Female,34,0,0,Yes,Govt_job,Urban,98.16298798688109,22.4,never smoked,0
+100251,Female,14,0,0,No,Self-employed,Urban,93.56503881730715,32.1,never smoked,0
+100252,Female,28,0,0,Yes,Private,Urban,97.58079421120816,24.7,never smoked,0
+100253,Female,79,0,0,Yes,Private,Urban,62.69040827223122,,formerly smoked,1
+100254,Female,56,0,0,Yes,Govt_job,Urban,86.83821891060255,32.5,Unknown,0
+100255,Female,70,0,0,Yes,Private,Urban,201.9400777581143,,Unknown,0
+100256,Female,35,0,0,No,Private,Rural,79.02266819447141,,smokes,0
+100257,Female,46,0,0,Yes,Govt_job,Urban,85.73243416838687,37.8,Unknown,0
+100258,Female,66,0,1,Yes,Govt_job,Rural,60.54418101340249,37.0,Unknown,0
+100259,Male,3,0,0,No,children,Rural,73.62884839034088,21.8,Unknown,0
+100260,Female,40,0,0,Yes,Self-employed,Urban,104.73759790634311,23.5,formerly smoked,0
+100261,Male,20,0,0,No,Private,Rural,123.96221742113492,27.6,Unknown,0
+100262,Female,42,0,0,Yes,Private,Urban,69.88347865592141,,smokes,0
+100263,Female,45,0,0,Yes,Govt_job,Urban,71.78742295681572,36.7,formerly smoked,0
+100264,Female,23,0,0,No,Private,Rural,98.78364948782617,40.4,smokes,0
+100265,Male,54,0,0,No,Govt_job,Rural,113.57747983560841,26.6,never smoked,0
+100266,Female,56,0,0,Yes,Self-employed,Urban,101.95935452231554,,formerly smoked,0
+100267,Female,21,0,0,No,Private,Urban,92.8104164719107,20.5,never smoked,0
+100268,Female,18,0,0,No,Private,Rural,85.38283454031841,21.7,Unknown,0
+100269,Female,18,0,0,No,Private,Urban,97.88789159026514,31.3,Unknown,0
+100270,Male,72,1,1,Yes,Self-employed,Rural,64.46957854179297,26.7,smokes,0
+100271,Female,0,0,0,No,children,Urban,56.29650150915022,16.5,Unknown,0
+100272,Female,14,0,0,No,Private,Rural,69.82398740585937,24.4,formerly smoked,0
+100273,Female,19,0,0,No,Private,Urban,115.31777763490159,29.2,never smoked,0
+100274,Female,57,0,1,Yes,Private,Urban,223.8562954363698,31.0,Unknown,1
+100275,Female,42,0,0,No,Private,Urban,63.789458858073,,never smoked,0
+100276,Male,19,0,0,No,Never_worked,Urban,120.5764007721558,,never smoked,0
+100277,Male,47,0,0,Yes,Private,Rural,57.61283419891418,32.8,formerly smoked,0
+100278,Female,21,0,0,No,Private,Urban,140.2663519031609,28.6,formerly smoked,0
+100279,Male,36,0,0,Yes,Govt_job,Urban,50.54799315467892,40.9,smokes,0
+100280,Male,51,0,0,Yes,Private,Rural,77.08327674702481,31.1,never smoked,0
+100281,Female,63,1,0,Yes,Private,Urban,65.59488475897993,23.6,never smoked,0
+100282,Male,23,0,0,No,Private,Rural,96.51010109859652,20.8,never smoked,0
+100283,Male,62,0,1,Yes,Private,Urban,162.64744621806312,37.5,smokes,1
+100284,Female,4,0,0,No,children,Rural,115.00374704780728,21.4,Unknown,0
+100285,Female,62,0,0,Yes,Govt_job,Urban,79.46410371844826,31.0,smokes,0
+100286,Male,81,0,0,Yes,Private,Urban,176.55182816737516,28.1,Unknown,0
+100287,Male,8,0,0,No,children,Rural,73.90094072874469,16.0,Unknown,0
+100288,Female,38,0,0,Yes,Self-employed,Urban,70.78773905062569,25.0,formerly smoked,0
+100289,Male,51,0,0,Yes,Private,Rural,198.96584436826345,37.9,formerly smoked,0
+100290,Female,15,0,0,No,Private,Rural,89.78231039304194,,never smoked,0
+100291,Female,66,0,0,Yes,Private,Urban,82.46031353866786,,formerly smoked,0
+100292,Male,6,0,0,No,children,Urban,82.59317599236654,15.8,Unknown,0
+100293,Female,77,0,0,No,Self-employed,Urban,139.91432873179724,34.9,formerly smoked,0
+100294,Female,29,0,0,No,Self-employed,Rural,76.26067730688754,19.6,Unknown,0
+100295,Male,41,0,0,Yes,Private,Urban,88.46681887972605,31.2,never smoked,0
+100296,Male,22,0,0,No,Private,Urban,82.09418905143576,23.0,Unknown,0
+100297,Female,44,0,0,Yes,Private,Urban,127.70961002466225,20.8,never smoked,0
+100298,Female,64,1,0,Yes,Self-employed,Urban,100.92415585238275,30.2,Unknown,0
+100299,Female,29,0,0,Yes,Private,Rural,106.10381202966416,,never smoked,0
+100300,Female,65,0,0,Yes,Private,Urban,207.78099046714968,46.0,formerly smoked,1
+100301,Female,7,0,0,No,children,Rural,95.65654396007612,15.1,Unknown,0
+100302,Female,7,0,0,No,children,Rural,80.92525932957984,18.0,Unknown,0
+100303,Female,33,0,0,Yes,Private,Rural,126.0303030556038,,never smoked,0
+100304,Female,82,0,0,Yes,Private,Urban,71.97730222029185,,never smoked,0
+100305,Female,76,0,0,No,Self-employed,Urban,193.33995087269517,40.8,never smoked,0
+100306,Female,20,0,0,No,Private,Urban,97.46431532301095,22.8,never smoked,0
+100307,Female,78,0,0,Yes,Private,Urban,62.076546069813126,24.0,Unknown,1
+100308,Male,17,0,0,No,Private,Urban,76.35635465239034,23.0,never smoked,0
+100309,Male,59,0,0,Yes,Self-employed,Urban,178.16724149980644,,Unknown,0
+100310,Female,32,0,0,No,Self-employed,Urban,64.65861653407008,40.4,never smoked,0
+100311,Male,58,0,0,Yes,Private,Rural,85.7276241030348,34.5,never smoked,0
+100312,Male,5,0,0,No,children,Urban,145.89357215450275,24.4,Unknown,0
+100313,Male,67,1,0,Yes,Private,Urban,85.89920754235285,31.3,formerly smoked,0
+100314,Female,76,0,0,Yes,Private,Rural,107.09711269058647,,formerly smoked,0
+100315,Male,58,0,0,Yes,Govt_job,Urban,133.7253430151398,30.6,never smoked,0
+100316,Male,47,0,0,No,Govt_job,Rural,118.72843364709351,,formerly smoked,0
+100317,Female,11,0,0,No,children,Urban,97.60087168288356,,formerly smoked,0
+100318,Female,8,0,0,No,children,Rural,86.85470488924639,18.8,Unknown,0
+100319,Female,55,0,0,Yes,Self-employed,Rural,80.70392184863007,,never smoked,1
+100320,Female,64,0,0,Yes,Self-employed,Rural,86.15400069849859,22.9,formerly smoked,0
+100321,Male,73,1,0,Yes,Private,Rural,87.16172742310899,34.9,formerly smoked,0
+100322,Female,35,0,0,Yes,Private,Rural,98.95436496640009,22.8,smokes,0
+100323,Female,61,0,0,Yes,Private,Urban,90.74706813311619,29.0,never smoked,0
+100324,Female,2,0,0,No,children,Urban,64.74944412967473,,Unknown,0
+100325,Female,25,0,0,No,Private,Urban,57.895764534715425,24.7,never smoked,0
+100326,Female,55,0,0,Yes,Private,Urban,80.38928175716131,32.5,smokes,0
+100327,Male,64,0,0,Yes,Self-employed,Urban,105.76579047581467,27.9,Unknown,0
+100328,Male,6,0,0,No,children,Rural,202.907249131048,25.3,never smoked,0
+100329,Female,60,0,0,Yes,Self-employed,Urban,55.47949117405705,,never smoked,0
+100330,Female,13,0,0,No,Private,Rural,249.65505063224973,22.9,never smoked,0
+100331,Female,39,0,0,Yes,Govt_job,Urban,62.45038651681672,41.6,never smoked,0
+100332,Female,20,0,0,No,Private,Urban,77.80607650543692,25.9,smokes,0
+100333,Male,12,0,0,No,children,Urban,81.43609886396285,19.1,Unknown,0
+100334,Female,47,0,0,Yes,Private,Rural,108.53038252310498,29.2,Unknown,0
+100335,Female,28,0,0,No,Private,Rural,57.279102065925024,26.9,formerly smoked,0
+100336,Female,33,0,0,No,Private,Rural,113.28015160136368,29.0,Unknown,0
+100337,Male,62,0,0,Yes,Private,Rural,155.55817089342634,40.1,never smoked,0
+100338,Male,15,0,0,No,children,Rural,87.35849654822276,30.2,Unknown,0
+100339,Male,47,0,0,Yes,Govt_job,Urban,100.76435805344309,32.9,never smoked,0
+100340,Female,71,0,1,Yes,Private,Urban,180.76765486991593,35.2,never smoked,0
+100341,Male,61,1,0,Yes,Private,Urban,208.24168616491377,41.1,Unknown,0
+100342,Male,0,0,0,No,children,Urban,55.085942851264264,,Unknown,0
+100343,Female,48,0,0,Yes,Private,Rural,105.00942572590742,26.4,Unknown,0
+100344,Male,24,0,0,No,Govt_job,Urban,61.60427533236404,24.6,never smoked,0
+100345,Female,38,0,0,Yes,Private,Rural,58.05601253043109,36.6,never smoked,0
+100346,Male,54,0,0,Yes,Private,Urban,92.8657043200964,31.0,never smoked,0
+100347,Male,71,1,0,Yes,Govt_job,Urban,177.47752406339274,21.5,Unknown,0
+100348,Male,44,0,0,Yes,Govt_job,Urban,69.31272818510519,19.8,smokes,0
+100349,Male,21,0,0,No,Private,Urban,117.8090912005236,,Unknown,0
+100350,Male,3,0,0,No,children,Urban,84.18754341665286,15.3,Unknown,0
+100351,Male,71,0,0,Yes,Private,Urban,73.61415558780308,27.3,formerly smoked,0
+100352,Female,37,0,0,Yes,Private,Urban,94.45928589786766,,Unknown,0
+100353,Male,74,0,0,Yes,Private,Rural,72.15191423969377,29.0,never smoked,0
+100354,Female,80,0,0,Yes,Private,Urban,81.48201103951875,32.2,never smoked,0
+100355,Female,52,0,0,No,Govt_job,Urban,101.18406872100478,,smokes,0
+100356,Female,47,0,0,Yes,Self-employed,Rural,87.71035411133323,24.3,never smoked,0
+100357,Female,13,0,0,No,children,Urban,118.58324923133226,27.0,Unknown,0
+100358,Female,61,0,0,Yes,Private,Urban,50.0,43.4,never smoked,0
+100359,Female,13,0,0,No,children,Rural,83.8766037320525,28.6,never smoked,0
+100360,Female,80,1,0,Yes,Self-employed,Rural,164.23408892849082,24.0,never smoked,1
+100361,Female,52,0,1,Yes,Private,Urban,182.7641068278423,26.4,never smoked,0
+100362,Female,38,0,0,Yes,Private,Urban,108.14894151153477,29.7,never smoked,0
+100363,Male,45,0,0,Yes,Private,Urban,105.88002286344599,24.9,Unknown,0
+100364,Female,41,0,0,Yes,Private,Rural,91.75316606002312,29.1,never smoked,0
+100365,Male,2,0,0,No,children,Urban,57.374993963768226,20.4,Unknown,0
+100366,Female,0,0,0,No,children,Urban,68.89371863429663,,Unknown,0
+100367,Male,58,0,0,Yes,Private,Rural,107.94771187988216,30.2,never smoked,0
+100368,Female,19,0,0,No,Private,Urban,85.6751260646169,31.3,Unknown,0
+100369,Male,62,0,0,Yes,Self-employed,Urban,79.83366850002975,32.2,formerly smoked,0
+100370,Female,17,0,0,No,Private,Rural,93.04052099024553,,never smoked,0
+100371,Female,77,0,0,Yes,Private,Urban,95.53655545136365,31.0,never smoked,1
+100372,Male,1,0,0,No,children,Rural,110.15375506145959,20.0,Unknown,0
+100373,Female,44,0,0,Yes,Private,Rural,68.89974505081796,23.8,formerly smoked,0
+100374,Male,37,0,0,Yes,Private,Rural,50.05632356048786,26.6,never smoked,0
+100375,Female,28,0,0,No,Private,Rural,78.23781934142538,24.5,never smoked,0
+100376,Male,62,1,0,Yes,Self-employed,Rural,60.180062664683305,27.3,smokes,1
+100377,Female,43,0,0,Yes,Govt_job,Rural,120.39474737960398,20.9,never smoked,0
+100378,Female,28,0,0,Yes,Private,Rural,95.32362201073319,28.9,never smoked,0
+100379,Female,18,0,0,Yes,Private,Rural,155.4248995441715,23.4,Unknown,0
+100380,Female,15,0,0,No,children,Urban,134.00914134064664,31.0,Unknown,0
+100381,Female,67,0,0,Yes,Private,Urban,117.10140429973843,35.9,never smoked,0
+100382,Female,30,0,0,Yes,Private,Urban,85.88224502647907,40.1,Unknown,0
+100383,Female,19,0,0,No,Private,Urban,63.575944588747475,24.9,formerly smoked,0
+100384,Male,29,0,0,Yes,Private,Urban,90.00297503032284,35.8,smokes,0
+100385,Male,49,0,0,Yes,Private,Rural,229.01298029036388,35.8,never smoked,0
+100386,Female,35,0,0,Yes,Govt_job,Rural,191.95860070325705,,never smoked,0
+100387,Male,46,1,0,No,Private,Rural,85.92591691203882,,never smoked,0
+100388,Female,43,0,0,Yes,Govt_job,Rural,69.41008312193246,22.7,Unknown,0
+100389,Female,47,0,0,Yes,Private,Rural,50.22099082449052,24.4,never smoked,0
+100390,Male,4,0,0,No,children,Rural,50.0,16.2,Unknown,0
+100391,Male,69,0,0,Yes,Self-employed,Urban,113.6857674318694,38.3,smokes,0
+100392,Female,10,0,0,No,children,Urban,96.86136764608715,,Unknown,0
+100393,Male,17,0,0,No,Private,Urban,76.09094802204092,40.4,Unknown,0
+100394,Female,52,0,0,Yes,Self-employed,Urban,100.28592734430802,29.3,formerly smoked,0
+100395,Male,59,0,0,Yes,Govt_job,Urban,224.94924376944442,36.7,smokes,0
+100396,Male,54,0,0,Yes,Private,Urban,105.69050321707972,29.5,never smoked,0
+100397,Female,67,0,0,Yes,Self-employed,Urban,260.7174207267374,27.0,smokes,0
+100398,Female,62,1,0,No,Private,Rural,70.30509375756132,33.8,formerly smoked,0
+100399,Male,27,0,0,No,Private,Rural,115.19994162223801,33.7,never smoked,0
+100400,Male,75,0,0,Yes,Govt_job,Urban,73.99652946740242,38.9,never smoked,0
+100401,Female,17,0,0,No,Private,Rural,100.02149127773387,34.4,Unknown,0
+100402,Male,55,0,0,No,Govt_job,Rural,76.77401580970488,18.1,formerly smoked,0
+100403,Male,33,0,0,Yes,Govt_job,Urban,159.78820710227026,35.2,never smoked,0
+100404,Female,0,0,0,No,children,Rural,100.457768809321,21.4,Unknown,0
+100405,Female,32,0,0,Yes,Govt_job,Urban,92.33799097451498,22.7,never smoked,0
+100406,Female,13,0,0,No,children,Rural,101.22712341122292,18.6,Unknown,0
+100407,Female,25,0,0,Yes,Private,Rural,62.641793002665736,17.6,never smoked,0
+100408,Female,46,0,0,Yes,Govt_job,Urban,56.2781147197911,27.8,never smoked,0
+100409,Female,38,0,0,Yes,Private,Urban,89.9699799837151,,Unknown,0
+100410,Male,47,0,0,Yes,Private,Rural,68.0587911679491,32.8,formerly smoked,0
+100411,Female,30,0,0,Yes,Private,Rural,169.1452300159135,35.7,Unknown,0
+100412,Male,71,0,0,Yes,Self-employed,Urban,90.46508214992167,45.1,formerly smoked,0
+100413,Female,3,0,0,No,children,Urban,67.96197020420922,17.2,Unknown,0
+100414,Female,63,0,0,Yes,Self-employed,Urban,92.99717951648745,34.8,Unknown,0
+100415,Female,34,0,0,Yes,Govt_job,Urban,84.08709337654318,25.5,formerly smoked,0
+100416,Male,33,0,0,Yes,Private,Urban,66.01325432030269,,Unknown,0
+100417,Female,82,1,0,Yes,Private,Urban,132.10116805444068,31.1,formerly smoked,0
+100418,Male,47,0,0,Yes,Private,Urban,88.19700814076441,34.9,smokes,0
+100419,Male,53,0,0,Yes,Private,Rural,218.04411758292008,35.8,never smoked,0
+100420,Male,3,0,0,No,children,Rural,132.91983079185275,20.1,Unknown,0
+100421,Male,53,1,0,Yes,Private,Urban,92.38396623128537,32.1,smokes,0
+100422,Male,28,0,0,Yes,Private,Urban,88.28872259012513,28.4,smokes,0
+100423,Female,17,0,0,No,Private,Urban,73.90419639897638,28.3,never smoked,0
+100424,Male,48,0,0,Yes,Private,Urban,61.20319086051356,,formerly smoked,0
+100425,Male,49,0,0,No,Private,Urban,133.95243269307133,30.7,smokes,0
+100426,Female,66,0,0,No,Self-employed,Rural,79.83722454933992,33.1,never smoked,0
+100427,Female,15,0,0,No,Never_worked,Urban,65.84059733237743,44.9,never smoked,0
+100428,Female,6,0,0,No,children,Urban,107.74083468259226,17.7,Unknown,0
+100429,Male,18,0,0,No,Private,Rural,93.10026768941358,45.9,never smoked,0
+100430,Male,9,0,0,No,children,Rural,93.02785911790747,18.6,Unknown,0
+100431,Male,0,0,0,No,children,Urban,77.65104353796372,27.3,Unknown,0
+100432,Female,39,0,0,No,Private,Rural,97.60880232214457,41.6,Unknown,0
+100433,Female,4,0,0,No,children,Urban,106.55528961608924,34.0,Unknown,0
+100434,Male,47,0,0,Yes,Private,Urban,166.38264357428545,43.8,smokes,0
+100435,Female,52,0,0,Yes,Self-employed,Urban,89.66056569847572,37.3,smokes,0
+100436,Female,19,0,0,Yes,Private,Rural,162.17668992473293,23.4,Unknown,0
+100437,Male,13,0,0,No,children,Urban,72.50358981308794,,Unknown,0
+100438,Female,37,0,0,No,Govt_job,Rural,94.09572386837704,21.4,never smoked,0
+100439,Female,65,0,0,Yes,Private,Urban,76.68019009366044,28.9,smokes,0
+100440,Female,22,0,0,Yes,Private,Urban,98.20988144241592,26.1,never smoked,0
+100441,Female,7,0,0,No,children,Urban,90.49230922342294,22.1,Unknown,0
+100442,Female,41,0,0,Yes,Private,Urban,116.00326912521723,,smokes,0
+100443,Female,43,0,0,Yes,Govt_job,Rural,82.53005391412411,25.4,never smoked,0
+100444,Female,84,0,0,Yes,Private,Rural,213.4375599244637,,smokes,0
+100445,Female,29,0,0,No,Self-employed,Rural,50.0,31.3,never smoked,0
+100446,Male,56,0,0,Yes,Private,Urban,143.0636082403608,23.5,never smoked,0
+100447,Female,78,0,0,Yes,Private,Urban,65.4328550309502,26.9,never smoked,0
+100448,Female,58,0,0,Yes,Self-employed,Urban,76.48773938651298,23.4,Unknown,0
+100449,Female,51,0,0,Yes,Govt_job,Rural,68.5109235853521,26.2,Unknown,0
+100450,Male,57,0,0,No,Govt_job,Urban,76.24470057410232,27.5,formerly smoked,0
+100451,Male,35,0,0,No,Govt_job,Rural,104.29093175210438,30.2,never smoked,0
+100452,Female,2,0,0,No,children,Urban,71.89310120594268,17.2,Unknown,0
+100453,Female,46,0,1,No,Private,Rural,107.98138120907177,25.1,smokes,0
+100454,Female,51,0,0,Yes,Private,Rural,71.1768723532742,26.4,Unknown,0
+100455,Male,34,0,0,Yes,Private,Urban,102.02591550305198,50.1,smokes,0
+100456,Female,79,0,0,Yes,Private,Urban,131.26097699979184,25.0,never smoked,0
+100457,Male,13,0,0,No,Self-employed,Urban,99.83716913639905,23.4,Unknown,0
+100458,Male,32,0,0,Yes,Private,Urban,172.81329539981695,39.4,formerly smoked,0
+100459,Female,59,1,1,Yes,Private,Urban,224.17317839394372,36.8,never smoked,0
+100460,Female,36,0,0,Yes,Private,Urban,205.73049116490031,,never smoked,0
+100461,Female,69,0,0,No,Govt_job,Urban,79.00883535797499,27.1,Unknown,1
+100462,Female,73,0,0,Yes,Govt_job,Urban,220.86540904782282,,never smoked,0
+100463,Male,49,1,0,Yes,Private,Rural,99.18530163619455,37.0,never smoked,0
+100464,Female,55,0,0,Yes,Private,Urban,78.1010867668859,21.2,never smoked,0
+100465,Male,60,0,0,Yes,Govt_job,Rural,83.31702316794585,27.3,smokes,0
+100466,Male,54,1,0,Yes,Self-employed,Urban,70.82010539492052,29.5,never smoked,0
+100467,Female,77,0,0,Yes,Self-employed,Rural,194.30767046442222,31.8,never smoked,0
+100468,Female,65,0,0,No,Govt_job,Rural,63.23794626896703,36.3,smokes,0
+100469,Male,17,0,0,No,Private,Rural,99.99991326912544,23.5,never smoked,0
+100470,Female,18,0,0,No,Private,Urban,68.21633393826127,23.6,Unknown,0
+100471,Female,0,0,0,No,children,Rural,55.80109407047517,19.2,Unknown,0
+100472,Female,53,0,0,Yes,Govt_job,Rural,90.27578604530964,30.2,never smoked,0
+100473,Female,28,0,0,Yes,Private,Rural,166.0899951743279,,never smoked,0
+100474,Female,44,0,0,No,Private,Urban,127.14929088460106,29.8,smokes,0
+100475,Female,31,0,0,Yes,Self-employed,Rural,86.50490774451643,32.0,Unknown,0
+100476,Male,75,0,0,Yes,Govt_job,Urban,144.28829358547566,27.6,formerly smoked,0
+100477,Male,21,0,0,No,Private,Rural,95.85110346808858,,formerly smoked,0
+100478,Female,9,0,0,No,children,Urban,91.78076482987768,18.6,formerly smoked,0
+100479,Female,66,0,0,Yes,Self-employed,Rural,102.3872545581135,25.1,formerly smoked,0
+100480,Female,24,0,0,No,Private,Urban,93.09392314071903,24.3,never smoked,0
+100481,Female,13,0,0,No,children,Rural,106.29697806196013,18.6,Unknown,0
+100482,Male,44,0,0,Yes,Self-employed,Rural,109.10909546356952,31.8,Unknown,0
+100483,Female,48,0,0,Yes,Self-employed,Urban,95.84042349536523,37.3,smokes,0
+100484,Male,39,1,0,Yes,Private,Rural,195.61040243304592,27.4,Unknown,0
+100485,Male,1,0,0,No,children,Urban,82.29254840507154,23.3,Unknown,0
+100486,Male,0,0,0,No,children,Urban,103.59509843570405,14.1,Unknown,0
+100487,Female,24,0,0,No,Private,Urban,116.99532018208963,21.0,smokes,0
+100488,Female,37,0,0,No,Private,Urban,89.39181157369129,,never smoked,0
+100489,Female,55,0,0,Yes,Private,Urban,102.87881003355797,,smokes,0
+100490,Male,5,0,0,No,children,Rural,89.09895565831577,16.2,Unknown,0
+100491,Female,22,0,0,No,Private,Urban,76.37698232879953,22.0,formerly smoked,0
+100492,Female,45,0,0,Yes,Private,Rural,187.85973041254857,50.2,smokes,0
+100493,Male,16,0,0,No,Private,Rural,103.09766299200287,23.5,never smoked,0
+100494,Male,74,0,1,Yes,Self-employed,Rural,127.53207549017313,26.5,Unknown,0
+100495,Female,8,0,0,No,children,Urban,92.72810306351863,16.1,Unknown,0
+100496,Female,32,0,0,Yes,Private,Rural,89.73352619843381,23.2,smokes,0
+100497,Female,14,0,0,No,Private,Urban,74.4016376764984,39.2,never smoked,0
+100498,Male,45,0,0,Yes,Private,Urban,104.86886336924627,33.9,formerly smoked,0
+100499,Female,67,0,1,Yes,Private,Rural,193.52775295645333,41.9,formerly smoked,0

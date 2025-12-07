@@ -1,0 +1,33 @@
+{
+  "best_pipeline": "M1_I0",
+  "best_model": "Gradient Boosting",
+  "metrics": {
+    "ROC-AUC": 0.8540452906089611,
+    "PR-AUC": 0.19078241185820224,
+    "F1-Score": 0.0,
+    "Recall": 0.0,
+    "Precision": 0.0
+  },
+  "top_features": [
+    {
+      "Feature": "avg_glucose_level",
+      "Importance": 0.2849214600787679
+    },
+    {
+      "Feature": "bmi",
+      "Importance": 0.23410583968088783
+    },
+    {
+      "Feature": "age",
+      "Importance": 0.2319607929588862
+    },
+    {
+      "Feature": "smoking_status_encoded",
+      "Importance": 0.0712717759579888
+    },
+    {
+      "Feature": "work_type_encoded",
+      "Importance": 0.048232609532758104
+    }
+  ]
+}
