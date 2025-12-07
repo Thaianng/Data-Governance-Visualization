@@ -135,7 +135,7 @@ Dữ liệu có **5.22% giá trị thiếu** ở cột `bmi` (293 giá trị).
 
 ![Missing Data Comparison](results/figures/missing_data_comparison.png)
 
-*So sánh phân phối BMI trước và sau khi xử lý với các phương pháp khác nhau*
+*So sánh phân phối BMI sau khi xử lý với 3 phương pháp khác nhau: M0 (Deletion) với n=5,316, M1 (Median) với n=5,609 và mean/median ~28.9, M2 (KNN) với n=5,609 và mean/median ~29.0*
 
 ### 2. Xử Lý Mất Cân Bằng (Imbalanced Data)
 
@@ -163,17 +163,13 @@ Tổng cộng **27 pipeline** được thử nghiệm:
 3 Missing Methods × 3 Imbalance Methods × 3 Models = 27 Pipelines
 ```
 
-![Methodology Pipeline](results/figures/eda_methodology_pipeline.png)
-
-*Sơ đồ pipeline xử lý dữ liệu và mô hình*
-
 ---
 
 ## 📈 Phân Tích Dữ Liệu Khám Phá (EDA)
 
 ### 1. Phân Bố Biến Mục Tiêu
 
-![Stroke Distribution](results/figures/eda_stroke_distribution.png)
+![Stroke Distribution](results/figures/eda_target_imbalance.png)
 
 - **Không đột quỵ (0)**: 5,338 bản ghi (95.17%)
 - **Đột quỵ (1)**: 271 bản ghi (4.83%)
@@ -183,7 +179,7 @@ Tổng cộng **27 pipeline** được thử nghiệm:
 
 ### 2. Phân Bố Các Đặc Trưng Số
 
-![Numerical Features](results/figures/eda_numerical_distributions.png)
+![Numerical Features](results/figures/eda_numeric_distributions.png)
 
 **Quan sát chính:**
 - **Tuổi (age)**: Phân phối rộng từ 0-82, đỉnh ở 40-60 tuổi
@@ -211,32 +207,37 @@ Tổng cộng **27 pipeline** được thử nghiệm:
 
 ### 5. Phân Tích Tuổi - Yếu Tố Quan Trọng Nhất
 
-![Age vs Stroke](results/figures/eda_age_vs_stroke.png)
+![Age vs Stroke](results/figures/eda_age_distribution_by_stroke.png)
 
 **Insight quan trọng:**
 - Nguy cơ đột quỵ tăng đáng kể sau tuổi 50
 - Hầu hết ca đột quỵ ở nhóm > 60 tuổi
 - Rất hiếm đột quỵ ở người < 30 tuổi
 
-### 6. Đường Huyết và Đột Quỵ
+### 6. Các Đặc Trưng Số và Đột Quỵ
 
-![Glucose vs Stroke](results/figures/eda_glucose_analysis.png)
+![Numeric Features by Stroke](results/figures/eda_numeric_by_stroke.png)
 
 **Insight:**
 - Đường huyết cao (> 200) có tỷ lệ đột quỵ cao hơn
 - Có thể liên quan đến tiểu đường - yếu tố nguy cơ đột quỵ
 
-### 7. BMI và Đột Quỵ
+### 7. Phân Bố Đặc Trưng Theo Đột Quỵ (Boxplot)
 
-![BMI vs Stroke](results/figures/eda_bmi_analysis.png)
-
-### 8. Yếu Tố Nguy Cơ Kết Hợp
-
-![Risk Factors](results/figures/eda_risk_factors.png)
+![Boxplot by Stroke](results/figures/eda_boxplot_by_stroke.png)
 
 **Insight:**
-- **Tăng huyết áp + Bệnh tim**: Tăng nguy cơ đột quỵ đáng kể
-- Kết hợp nhiều yếu tố nguy cơ làm tăng rủi ro
+- So sánh phân phối các đặc trưng số (tuổi, BMI, đường huyết) giữa nhóm đột quỵ và không đột quỵ
+- Nhóm đột quỵ có tuổi trung bình cao hơn đáng kể
+
+### 8. Tỷ Lệ Đột Quỵ Theo Các Yếu Tố Nguy Cơ
+
+![Stroke Rate by Category](results/figures/eda_stroke_rate_by_category.png)
+
+**Insight:**
+- Tỷ lệ đột quỵ theo các đặc trưng danh mục (giới tính, hôn nhân, công việc, hút thuốc)
+- **Tăng huyết áp và bệnh tim** có tỷ lệ đột quỵ cao hơn đáng kể
+- Yếu tố tuổi tác và bệnh lý nền ảnh hưởng rõ rệt
 
 ---
 
@@ -272,27 +273,26 @@ Tổng cộng **27 pipeline** được thử nghiệm:
 
 ### 3. So Sánh Phương Pháp Xử Lý Missing Data
 
-![Missing Data Methods](results/figures/model_metrics_by_missing_method.png)
+![Missing Data Methods](results/figures/missing_pipeline_comparison.png)
 
 **Kết luận:**
 - **M1 (Median Imputation)** cho kết quả tốt nhất tổng thể
 - **M0 (Listwise Deletion)** mất ~5% dữ liệu nhưng kết quả vẫn tốt
 - **M2 (KNN Imputation)** tương đương M1
 
-### 4. So Sánh Phương Pháp Xử Lý Imbalance
+### 4. So Sánh Tất Cả Các Pipeline (Heatmap)
 
-![Imbalance Methods](results/figures/model_metrics_by_imbalance_method.png)
+![Model Metrics Heatmap](results/figures/model_metrics_heatmap.png)
 
 **Kết luận:**
+- Heatmap hiển thị ROC-AUC của tất cả 27 pipeline (3 Missing × 3 Imbalance × 3 Models)
 - **I2 (Class Weights)** hiệu quả nhất cho ROC-AUC
 - **I1 (SMOTE + Undersampling)** cho Recall cao hơn
-- **I0 (None)** kết quả kém - mô hình bias
+- **M1 (Median Imputation)** cho kết quả ổn định nhất
 
 ### 5. So Sánh Các Mô Hình
 
-![Model Comparison](results/figures/model_metrics_by_model.png)
-
-**Kết luận:**
+**Kết luận từ Heatmap:**
 - **Random Forest** tốt nhất cho ROC-AUC (0.863)
 - **Logistic Regression** tốt cho Recall (đơn giản, diễn giải dễ)
 - **Gradient Boosting** cân bằng giữa hai
